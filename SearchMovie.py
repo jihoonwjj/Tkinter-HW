@@ -98,6 +98,7 @@ def removemsfframe():
 
 def getEntity():
     global currentMusic
+    global tmpMusic
 
     for i in movieInfo.winfo_children(): i.destroy()
     movie = '0'
@@ -150,13 +151,13 @@ def getEntity():
         Label(movieInfo, image=homealoneImage).grid()
         currentMusic = homealone
     elif movie[2] == "범죄와의 전쟁":
-        Label(movieInfo, image=warwithcrime).grid()
+        Label(movieInfo, image=wtcImage).grid()
         currentMusic = jangiha
     elif movie[2] == "뽀롱뽀롱 뽀로로":
         Label(movieInfo, image=pororoImage)
         currentMusic = pororo
     elif movie[2] == "권순분 여사 납치사건":
-        Label(movieInfo, image=namunheui)
+        Label(movieInfo, image=grandmaImage)
         currentMusic = duckply
     elif movie[2] == "죠죠의 기묘한 모험":
         Label(movieInfo, image=jojoImage)
@@ -168,6 +169,9 @@ def getEntity():
         Label(movieInfo, image=jjanggu)
         currentMusic = jjangguost
     else: currentMusic = FALSE
+
+    if currentMusic != FALSE: tmpMusic = currentMusic
+
 
 angle = 0
 
