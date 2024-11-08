@@ -84,7 +84,7 @@ def quitApp():
     sound.set_volume(100)
     label = Label(win, image=niggacatImage)
     label.place(x=300,y=0)
-    niggacat.play()
+    niggacat.play() 
     label.tkraise()
     win.after(1205, exit)
 
